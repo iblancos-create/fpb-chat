@@ -1,0 +1,69 @@
+<style>
+#btn-barargi {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    background: url("Cara Barargi.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    cursor: pointer;
+    z-index: 9999;
+    transition: transform 0.2s;
+}
+#btn-barargi:hover {
+    transform: scale(1.1);
+}
+
+#chat-window {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 420px;
+    height: 600px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.28);
+    display: none;
+    z-index: 99999;
+    overflow: hidden;
+}
+#chat-window iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+#cerrar-chat {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: #e53935;
+    color: white;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    z-index: 100000;
+}
+</style>
+
+<div id="btn-barargi"></div>
+
+<div id="chat-window">
+    <button id="cerrar-chat">Cerrar</button>
+    <iframe src="fpb_chat.html"></iframe>
+</div>
+
+<script>
+document.getElementById("btn-barargi").onclick = function() {
+    document.getElementById("chat-window").style.display = "block";
+};
+document.getElementById("cerrar-chat").onclick = function() {
+    document.getElementById("chat-window").style.display = "none";
+};
+</script>
