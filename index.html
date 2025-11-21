@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistente FP Barakaldo</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Botón flotante -->
+    <div id="chat-button">
+        <img src="img/barargi.png" alt="Barargi" />
+    </div>
+
+    <!-- Ventana del chat -->
+    <div id="chat-container" class="hidden">
+        <div id="chat-header">
+            <img src="img/barargi.png" class="avatar" />
+            <span>Asistente FP Barakaldo</span>
+            <button id="close-chat">✖</button>
+        </div>
+
+        <div id="chat-messages"></div>
+
+        <div id="chat-input-area">
+            <input id="chat-input" type="text" placeholder="Escribe tu mensaje...">
+            <button id="send-btn">Enviar</button>
+        </div>
+    </div>
+
+    <script src="js/chat.js"></script>
+</body>
+</html>
